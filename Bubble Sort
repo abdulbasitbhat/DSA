@@ -1,112 +1,57 @@
 Bubble Sort
------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------
 #include<iostream>
-
 using namespace std;
 
-
-
 /*void show(int a[],int size){
-
 	int i;
-
 	for(i=0;i<size;i++){
-
 		cout<<a[i]<<" ";
-
 	}
-
 	cout<<endl;
-
 }*/
 
-
-
 void sort(int a[],int size){
-
     int i;
-
     int temp;
-
 	for(i=0;i<(size);i++){
-
-		for(int j=i+1;j<size-1;j++){
-
+		for(int j=i+1;j<size;j++){
 			if(a[j]<a[i]){
-
 				  temp=a[j];
-
 				  a[j]=a[i];
-
 				  a[i]=temp;
-
 				}
-
 			}
-
 		}
-
 	cout<<"Sorted Array:"<<endl;	
-
 	int k;
-
 	for(k=0;k<size;k++){
-
 		cout<<a[k]<<" ";
-
 	    }
-
 	       cout<<endl;
-
 	}
-
 int main(){
-
 	int i,size;
-
     cout<<"Enter the size of array"<<endl;
-
     cin>>size;
-
     int a[size];
-
     cout<<"Enter the elements of array"<<endl;
-
       for(i=0;i<size;i++){
-
       	cin>>a[i];
-
 	  }
-
 	  
-
 	cout<<"unsorted array"<<endl;
-
 	  for(i=0;i<size;i++){
-
 		cout<<a[i];
-
 		cout<<" ";
-
 	    }
-
 	cout<<endl;
 
-
-
     sort(a,size);
-
-	cout<<"Sorted array"<<endl;
-
     //show(a,size);
-
 }
------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 //dont use size++ to inc size use size=size+1  or ++size;
-
 //dont use function show here because change made in a array by sort(a,size) are only confined to sort func
-
 //in main func a is still same. i,e the array changed by sort can only be used in sort func.
------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+--------------------------------------------------------------------------------------------------------------------------------------------
